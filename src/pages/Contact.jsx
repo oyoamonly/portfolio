@@ -4,7 +4,7 @@ export default function Contact() {
       <h1>Contact 💌</h1>
 
       <p className="page-description">
-        함께 이야기 나누고 싶다면 아래 주소로 편하게 연락 주세요.
+        Feel free to reach out if you want to connect, collaborate, or just say hi!
       </p>
 
       <div className="section-block">

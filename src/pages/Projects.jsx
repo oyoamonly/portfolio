@@ -15,7 +15,7 @@ export default function Projects() {
       <h1>Projects 🕹️</h1>
 
       <p className="page-description">
-        작은 문제를 발견하고, 더 나은 경험으로 바꿔온 프로젝트들입니다.
+        Things I've built, problems I've solved, and what I've learned along the way.
       </p>
 
       <div className="project-list">

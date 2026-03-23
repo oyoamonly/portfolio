@@ -211,7 +211,7 @@ export default function Profile() {
       </div>
 
       <div className="section-block">
-        <h2>🏷️ Certifications</h2>
+        <h2>📄 Certifications</h2>
 
         <div className="profile-entry">
           <ul>
