@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <section>
+    <section className="home">  {/* 여기 추가 */}
       <h1>Hi. 👋</h1>
       <h2>My name is Minji</h2>
 

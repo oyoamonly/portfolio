@@ -50,7 +50,7 @@ const projectDetails = {
     organization: "(주)링크12",
     role: "마케팅 기획",
     period: "2024.08 ~ 2024.10",
-    link: "https://www.instagram.com/reel/C_t6IvEOwUw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+    links: [{ label: "광고 바로가기", url: "https://www.instagram.com/reel/C_t6IvEOwUw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" }],
     overview: [
       "서비스 출시 초기 이후 1개월 만에 신규 유저 유입이 약 90% 감소하며 온드 채널 중심 성장의 한계를 확인했습니다.",
       "인지도 확장이 필요한 시점에서 채널 확장보다 콘텐츠 메시지 개선이 더 효과적일 것이라는 가설을 세우고 프로젝트를 진행했습니다.",
@@ -140,7 +140,10 @@ const projectDetails = {
     organization: "AX WAVE 1기 - AI 서비스 기획자 과정",
     role: "개인 프로젝트",
     period: "2026.01",
-    links: [{ label: "시연 영상", url: "https://drive.google.com/drive/folders/1-neGhzBMHdaPneQbT66WwmopIAdtkE4L?usp=sharing" }],
+    links: [
+    { label: "시연 영상 1", url: "https://drive.google.com/file/d/1ZG2Poz2EezP-upftup_ep74QmcUfl8nQ/view?usp=drive_link" },
+    { label: "시연 영상 2", url: "https://drive.google.com/file/d/1uQcG2Y1-NuS_ZljRV6nBYnfF5k9ziSEl/view?usp=sharing" },
+  ],
     overview: [
       "개인 단위로 분산된 데일리 스크럼 운영으로 인해 팀 전체 업무 상태를 한눈에 파악하기 어려운 문제를 핵심 이슈로 정의했습니다.",
       "n8n 기반 자동화와 AI 요약을 활용해 개인 스크럼을 팀 단위 업무 상태로 집계·공유하는 구조를 설계했습니다.",
@@ -215,7 +218,7 @@ const projectDetails = {
     organization: "AX WAVE 1기 - AI 서비스 기획자 과정",
     role: "개인 프로젝트",
     period: "2026.01",
-    link: "",
+    links: [{ label: "시연 영상", url: "https://drive.google.com/file/d/1expvrcnZEA4n8BpkSX6DFYikaIsK05xg/view?usp=sharing" }],
     overview: [
       "생활 기기 사용 정보가 검색·기록 과정에서 반복적으로 소실되고 파편화되는 문제를 페인포인트로 정의했습니다.",
       "모델명 기반 AI 자동 완성과 상황 태그 구조를 통해 사용 기억을 즉시 저장·확장하는 앱 서비스를 기획했습니다.",
@@ -294,8 +297,8 @@ export default function ProjectDetail() {
         ))}
       </div>
 
-      {/* 
-{project.video && (
+{/* 
+      {project.video && (
   <div
     style={{
       marginTop: "28px",
