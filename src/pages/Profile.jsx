@@ -1,12 +1,12 @@
 export default function Profile() {
   return (
     <section>
-      <h1>Profile</h1>
+      <h1>Profile 👩🏻‍💻</h1>
 
       <p className="page-description">김민지 · Product Manager</p>
 
       <div className="section-block">
-        <h2>Summary</h2>
+        <h2>Who am I?</h2>
 
         <div className="profile-entry">
           <p>
@@ -38,10 +38,10 @@ export default function Profile() {
       </div>
 
       <div className="section-block">
-        <h2>Work Experience</h2>
+        <h2>💼 Work Experience</h2>
 
         <div className="profile-entry">
-          <h3>(주)링크12</h3>
+          <h3>링크12 | 에듀테크 스타트업</h3>
           <p className="meta-line">마케팅 기획 · 2024.06 ~ 2025.02</p>
           <ul>
             <li>플랫폼 UX 개선 및 A/B 테스트 기획</li>
@@ -51,7 +51,7 @@ export default function Profile() {
         </div>
 
         <div className="profile-entry">
-          <h3>(주)링크12</h3>
+          <h3>링크12 | 에듀테크 스타트업</h3>
           <p className="meta-line">콘텐츠 마케팅 인턴 · 2024.03 ~ 2024.05</p>
 
           <h4>1. 채널별 콘텐츠 전략 및 프로세스 설계</h4>
@@ -91,7 +91,7 @@ export default function Profile() {
       </div>
 
       <div className="section-block">
-        <h2>Skills</h2>
+        <h2>🛠 Skills</h2>
 
         <div className="profile-entry">
           <p>Figma · Notion · Slack</p>
@@ -103,27 +103,25 @@ export default function Profile() {
       </div>
 
       <div className="section-block">
-        <h2>Education</h2>
+        <h2>🏫 Education</h2>
 
         <div className="profile-entry">
           <h3>숙명여자대학교</h3>
-          <p>소비자경제학과</p>
-          <p>경영학부 복수전공</p>
-          <p>학점 3.95/4.5</p>
           <p className="meta-line">2019.03 ~ 2024.08</p>
+          <p>소비자경제학과 주전공 | 경영학부 복수전공</p>
+          <p>학점 3.95/4.5</p>
         </div>
 
         <div className="profile-entry">
           <h3>University of the Incarnate Word</h3>
-          <p>Economics</p>
-          <p>미국 교환학생</p>
-          <p>학점 3.74/4.0</p>
           <p className="meta-line">2022.01 ~ 2022.05</p>
+          <p>미국 교환학생 | Economics</p>
+          <p>학점 3.74/4.0</p>
         </div>
       </div>
 
       <div className="section-block">
-        <h2>Activities</h2>
+        <h2>✨ Activities</h2>
 
         <div className="profile-entry">
           <h3>AX WAVE 1기 - AI 서비스 기획자 과정</h3>
@@ -197,7 +195,7 @@ export default function Profile() {
       </div>
 
       <div className="section-block">
-        <h2>Awards</h2>
+        <h2>🏆 Awards</h2>
 
         <div className="profile-entry">
           <h3>CJ OneFlow AI 프로젝트 - 최우수상</h3>
@@ -213,7 +211,7 @@ export default function Profile() {
       </div>
 
       <div className="section-block">
-        <h2>Certifications</h2>
+        <h2>🏷️ Certifications</h2>
 
         <div className="profile-entry">
           <ul>
@@ -225,33 +223,10 @@ export default function Profile() {
       </div>
 
       <div className="section-block">
-        <h2>Languages</h2>
+        <h2>💬 Languages</h2>
 
         <div className="profile-entry">
-          <p>영어</p>
-          <p>비즈니스 회화</p>
-        </div>
-      </div>
-
-      <div className="section-block">
-        <h2>Links</h2>
-
-        <div className="profile-entry">
-          <p>
-            Email:{" "}
-            <a href="mailto:minjikim0825@gmail.com">minjikim0825@gmail.com</a>
-          </p>
-          <p>Phone: 010-2567-4553</p>
-          <p>
-            LinkedIn:{" "}
-            <a
-              href="http://linkedin.com/in/ellakim00"
-              target="_blank"
-              rel="noreferrer"
-            >
-              linkedin.com/in/ellakim00
-            </a>
-          </p>
+          <p>영어 · 비즈니스 회화 </p>
         </div>
       </div>
     </section>

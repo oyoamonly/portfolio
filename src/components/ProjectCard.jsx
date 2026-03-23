@@ -17,7 +17,13 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
 
-      <div className="project-thumb">IMG</div>
+      <div className="project-thumb">
+        {project.thumbnail ? (
+          <img src={project.thumbnail} alt={project.title} />
+        ) : (
+          "IMG"
+        )}
+      </div>
     </Link>
   );
 }

@@ -50,7 +50,7 @@ const projectDetails = {
     organization: "(주)링크12",
     role: "마케팅 기획",
     period: "2024.08 ~ 2024.10",
-    link: "",
+    link: "https://www.instagram.com/reel/C_t6IvEOwUw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     overview: [
       "서비스 출시 초기 이후 1개월 만에 신규 유저 유입이 약 90% 감소하며 온드 채널 중심 성장의 한계를 확인했습니다.",
       "인지도 확장이 필요한 시점에서 채널 확장보다 콘텐츠 메시지 개선이 더 효과적일 것이라는 가설을 세우고 프로젝트를 진행했습니다.",
@@ -139,8 +139,8 @@ const projectDetails = {
     subtitle: "n8n과 AI 요약을 활용해 데일리 스크럼 자동화 시스템을 기획한 프로젝트",
     organization: "AX WAVE 1기 - AI 서비스 기획자 과정",
     role: "개인 프로젝트",
-    period: "2025.09 ~ 2026.02",
-    link: "",
+    period: "2026.01",
+    links: [{ label: "시연 영상", url: "https://drive.google.com/drive/folders/1-neGhzBMHdaPneQbT66WwmopIAdtkE4L?usp=sharing" }],
     overview: [
       "개인 단위로 분산된 데일리 스크럼 운영으로 인해 팀 전체 업무 상태를 한눈에 파악하기 어려운 문제를 핵심 이슈로 정의했습니다.",
       "n8n 기반 자동화와 AI 요약을 활용해 개인 스크럼을 팀 단위 업무 상태로 집계·공유하는 구조를 설계했습니다.",
@@ -175,8 +175,11 @@ const projectDetails = {
     subtitle: "LLM 기반 리뷰 검증 B2B 플랫폼을 기획한 프로젝트",
     organization: "AX WAVE 1기 - AI 서비스 기획자 과정",
     role: "팀 프로젝트",
-    period: "2025.09 ~ 2026.02",
-    link: "",
+    period: "2025.12",
+    links: [
+    { label: "Website", url: "https://693b84fb8e5a9b10f4c0be68--incandescent-salmiakki-671e60.netlify.app/#/" },
+    { label: "시연 영상", url: "https://youtu.be/xJLbLf4Dm1A?si=-joCOvduhwrpmQdU" },
+  ],
     overview: [
       "AI·광고성 리뷰 확산으로 소비자 리뷰 신뢰도가 낮아지고, 글로벌 숙소 플랫폼의 신뢰도 하락 문제를 핵심 Pain으로 정의했습니다.",
       "LLM 기반 의미 분석을 통해 리뷰 진위 판단과 숙소별 신뢰도 스코어를 제공하는 B2B 웹 대시보드 MVP를 기획했습니다.",
@@ -211,7 +214,7 @@ const projectDetails = {
     subtitle: "개인 물건의 사용 기억을 저장·확장하는 AI 서비스 기획",
     organization: "AX WAVE 1기 - AI 서비스 기획자 과정",
     role: "개인 프로젝트",
-    period: "2025.09 ~ 2026.02",
+    period: "2026.01",
     link: "",
     overview: [
       "생활 기기 사용 정보가 검색·기록 과정에서 반복적으로 소실되고 파편화되는 문제를 페인포인트로 정의했습니다.",
@@ -271,13 +274,18 @@ export default function ProjectDetail() {
         {detail.period} · {detail.organization}
       </p>
 
-      {detail.link ? (
-        <p>
-          <a href={detail.link} target="_blank" rel="noreferrer">
-            Website
-          </a>
-        </p>
-      ) : null}
+      {Array.isArray(detail.links) && detail.links.length > 0 && (
+  <p className="project-links-inline">
+    {detail.links.map((link, index) => (
+      <span key={index}>
+        <a href={link.url} target="_blank" rel="noreferrer">
+          {link.label}
+        </a>
+        {index !== detail.links.length - 1 && " / "}
+      </span>
+    ))}
+  </p>
+)}
 
       <div className="section-block">
         <h2>Overview</h2>
@@ -285,6 +293,31 @@ export default function ProjectDetail() {
           <p key={index}>{item}</p>
         ))}
       </div>
+
+      {project.video && (
+  <div
+    style={{
+      marginTop: "28px",
+      display: "flex",
+      justifyContent: "center",
+    }}
+  >
+    <video
+      controls
+      style={{
+        display: "block",
+        width: "320px",
+        maxWidth: "100%",
+        height: "auto",
+        borderRadius: "12px",
+        background: "#000",
+      }}
+    >
+      <source src={project.video} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+)}
 
       <div className="section-block">
         <h2>Role</h2>
@@ -302,11 +335,16 @@ export default function ProjectDetail() {
         </div>
       ))}
 
-      {detail.images.map((image, index) => (
-        <div key={index} className="detail-image-placeholder">
-          {image}
+      {Array.isArray(project.detailImages) &&
+      project.detailImages.map((img, index) => (
+        <div key={index} className="detail-image-wrap">
+          <img
+            src={img}
+            alt={`${project.title}-${index + 1}`}
+            className="detail-image"
+          />
         </div>
       ))}
-    </section>
-  );
+  </section>
+);
 }
