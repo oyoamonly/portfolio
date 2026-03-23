@@ -294,7 +294,8 @@ export default function ProjectDetail() {
         ))}
       </div>
 
-      {project.video && (
+      {/* 
+{project.video && (
   <div
     style={{
       marginTop: "28px",
@@ -318,6 +319,7 @@ export default function ProjectDetail() {
     </video>
   </div>
 )}
+*/}
 
       <div className="section-block">
         <h2>Role</h2>

@@ -17,7 +17,9 @@ import reviewtrustDetail1 from "../assets/projects/reviewtrust/detail1.png";
 import reviewtrustDetail2 from "../assets/projects/reviewtrust/detail2.png";
 
 import howboxThumb from "../assets/projects/howbox/thumb.png";
+{/*
 import howboxVideo from "../assets/projects/howbox/demo.mp4";
+*/}
 
 export const projects = [
   {
@@ -77,6 +79,6 @@ export const projects = [
     date: "2026.01",
     tags: ["AI", "App", "Product"],
     thumbnail: howboxThumb,
-    video: howboxVideo,
+    /*video: howboxVideo*/
   },
 ];
